@@ -1,0 +1,49 @@
+/* === CARD CONTAINER FOR EACH USER === */
+.user-card {
+  background: white;                            /* Clean white background */
+  border-radius: 12px;                          /* Soft, rounded edges */
+  padding: 1.5rem;                              /* Internal spacing */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);  /* Subtle shadow around edges */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Slight lift + stronger shadow on hover for depth */
+.user-card:hover {
+  transform: translateY(-2px);                 /* Tiny upward nudge */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);  /* Enhanced shadow on hover */
+}
+
+/* === USER NAME STYLING === */
+.user-name {
+  font-size: 1.25rem;                          /* Slightly larger title */
+  font-weight: 600;                            /* Bold for emphasis */
+  color: #1a1a1a;                              /* Nearly black for high contrast */
+  margin-bottom: 1rem;
+}
+
+/* === SHARED STYLE FOR EMAIL + COMPANY SECTIONS === */
+.user-info {
+  display: flex;                               /* Side-by-side layout */
+  align-items: center;                         /* Vertically align icon and text */
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;                              /* Medium muted gray */
+}
+
+/* === ICON STYLING WITHIN .user-info === */
+.user-info-icon {
+  color: #6b7280;                              /* Slightly lighter gray */
+  width: 1.25rem;
+  height: 1.25rem;                             /* Keeps icons consistently sized */
+}
+
+/* === TEXT PART OF THE INFO ROW === */
+.user-info-text {
+  font-size: 0.95rem;                          /* Easy-to-read size */
+}
+
+/* === LABEL TEXT LIKE 'Email:' or 'Company:' === */
+.user-info-label {
+  font-weight: 500;                            /* Makes labels pop a bit */
+  color: #374151;                              /* Darker tone for visual hierarchy */
+}

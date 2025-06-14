@@ -1,13 +1,35 @@
+// Import core React and memo utility to prevent unnecessary re-renders
 import React from 'react';
+// Import icons used in the UI
+import { Mail, Building } from 'lucide-react';
+// Import styles scoped to this component
+import '../styles/UserCard.css';
 
+// Functional component wrapped in React.memo to improve performance
 const UserCard = React.memo(({ user }) => {
   return (
-    <div style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '15px' }}>
-      <h3>{user.name}</h3>
-      <p><strong>Email:</strong> {user.email}</p>
-      <p><strong>Company:</strong> {user.company.name}</p>
+    <div className="user-card">
+      {/* Display the user's name */}
+      <h3 className="user-name">{user.name}</h3>
+
+      {/* Email section with icon and label */}
+      <div className="user-info">
+        <Mail className="user-info-icon" />
+        <span className="user-info-text">
+          <span className="user-info-label">Email:</span> {user.email}
+        </span>
+      </div>
+
+      {/* Company section with building icon */}
+      <div className="user-info">
+        <Building className="user-info-icon" />
+        <span className="user-info-text">
+          <span className="user-info-label">Company:</span> {user.company.name}
+        </span>
+      </div>
     </div>
   );
 });
 
+// Exporting the memoized component for reuse across the app
 export default UserCard;
